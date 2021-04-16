@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import Calculator from './components/Calculator';
 
 const App = () => {
 
   return (
     <div className="app">
-      <h1>hi</h1>
+      <Calculator />
     </div>
   );
 }
