@@ -33,10 +33,19 @@ export const calculatorSlice = createSlice({
     addLoss: (state) => {
       state.currentLoseStreak += 1
     },
+    setBet: (state, action) => {
+      state.currentBet = action.payload.currentBet
+    },
+    setLongestWin: (state, action) => {
+      state.longestWinStreak = action.payload.longestWinStreak
+    },
+    setLongestLoss: (state, action) => {
+      state.longestLoseStreak = action.payload.longestLoseStreak
+    },
   },
 });
 
-export const { setDiceRoll, setBalance, resetWin, resetLose, addWin, addLoss } = calculatorSlice.actions;
+export const { setDiceRoll, setBalance, resetWin, resetLose, addWin, addLoss, setBet, setLongestWin, setLongestLoss } = calculatorSlice.actions;
 
 
 export default calculatorSlice.reducer;
